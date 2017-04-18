@@ -1,4 +1,5 @@
 require('rspec')
+require('descriptive_statistics')
 require('scrabble')
 
 describe('String#scrabble') do
@@ -10,6 +11,6 @@ describe('String#scrabble') do
     expect("a".scrabble()).to(eq(1))
   end
   it('returns a scrabble score for multiple letters in an word') do
-    expect("abc".scrabble()).to(eq(6))
+    expect("abc".scrabble()).to(eq(7))
   end
 end

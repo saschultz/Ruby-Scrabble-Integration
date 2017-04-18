@@ -1,3 +1,5 @@
+require('descriptive_statistics')
+
 class String
   define_method(:scrabble) do
     letter_values = Hash.new()
@@ -27,14 +29,20 @@ class String
     letter_values.store("x", 8)
     letter_values.store("q", 10)
     letter_values.store("z", 10)
+    score_array = []
+    letter_array = self.downcase.split("")
+    letter_array.each do |letter|
+      score_array.push(letter_values.fetch(letter))
+    end
     # letter = self.downcase
     # hash_key = letter_values.each do |key|
       # if key.include?(letter) == true
       #   key
       # end
-      letter_values.fetch(self)
-    end
+    puts score_array.sum()
+    score_array.sum()
   end
+end
 
 
 
