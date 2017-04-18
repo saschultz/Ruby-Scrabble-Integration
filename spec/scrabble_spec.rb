@@ -11,6 +11,6 @@ describe('String#scrabble') do
     expect("a".scrabble()).to(eq(1))
   end
   it('returns a scrabble score for multiple letters in an word') do
-    expect("abc".scrabble()).to(eq(7))
+    expect("abCzx".scrabble()).to(eq(25))
   end
 end
