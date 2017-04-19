@@ -10,4 +10,12 @@ describe('the scrabble path', {:type => :feature}) do
     click_button('Score')
     expect(page).to have_content('14')
   end
+
+  it('reloads the home page after clicking another word button') do
+    visit('/')
+    fill_in('word', :with => 'Queen')
+    click_button('Score')
+    click_on('Home')
+    expect(page).to have_button('Score')
+  end
 end
