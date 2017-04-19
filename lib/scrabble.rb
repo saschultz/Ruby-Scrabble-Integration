@@ -22,7 +22,6 @@ class String
       end
       score_array.push(letter_values.fetch(letter_key))
     end
-    puts score_array.sum()
     score_array.sum()
   end
 end
